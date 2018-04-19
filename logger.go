@@ -19,7 +19,6 @@ import (
 //	    "compress":true,
 //	  }
 //	}
-
 //Пример вызова
 //	logg := Create("example")
 func Create(configPath) *Logger {
