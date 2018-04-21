@@ -3,7 +3,10 @@
 package logger
 
 import (
+	"fmt"
+	"github.com/B2BFamily/config"
 	lumberjack "github.com/natefinch/lumberjack"
+	"time"
 )
 
 //Создание экземпляра логгера на основе конфигурации
@@ -21,8 +24,9 @@ import (
 //	}
 //Пример вызова
 //	logg := Create("example")
-func Create(configPath) *Logger {
+func Create(configPath string) *Logger {
 	logg := new(Logger)
+	config.GetConfigPath(configPath, &logg.Config)
 	logg.init()
 	return logg
 }
@@ -50,8 +54,7 @@ func (base *Logger) Panic(format string, a ...interface{}) {
 
 //инициализация логгера, если задание параметров проводилось в ручную
 func (base *Logger) init() {
-
-	base.logget = lumberjack.Logger{
+	base.logger = lumberjack.Logger{
 		Filename:   base.Config.Filename,
 		MaxSize:    base.Config.MaxSize,
 		MaxBackups: base.Config.MaxBackups,

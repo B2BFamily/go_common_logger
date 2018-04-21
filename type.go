@@ -16,7 +16,7 @@ type LoggerConfig struct {
 
 //Объект логгера
 type Logger struct {
-	logget *lumberjack.Logger
-	Config *LoggerConfig
+	logger lumberjack.Logger
+	Config LoggerConfig
 	isInit bool
 }
