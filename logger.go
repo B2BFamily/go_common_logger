@@ -69,5 +69,5 @@ func (base *Logger) write(mode string, text string) {
 	if !base.isInit {
 		base.init()
 	}
-	base.logger.Write([]byte(fmt.Sprintf("%v %6v: %v\n", time.Now().Format("2006-01-02T15:04:05.999999-07:00"), text)))
+	base.logger.Write([]byte(fmt.Sprintf("%v %6v: %v\n", time.Now().Format("2006-01-02T15:04:05.999999-07:00"), mode, text)))
 }
