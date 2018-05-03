@@ -32,23 +32,23 @@ func Create(configPath string) *Logger {
 }
 
 func (base *Logger) Info(format string, a ...interface{}) {
-	text := fmt.Sprintf(format, a)
+	text := fmt.Sprintf(format, a...)
 	base.write("INFO", text)
 }
 func (base *Logger) Trace(format string, a ...interface{}) {
-	text := fmt.Sprintf(format, a)
+	text := fmt.Sprintf(format, a...)
 	base.write("TRACE", text)
 }
 func (base *Logger) Debug(format string, a ...interface{}) {
-	text := fmt.Sprintf(format, a)
+	text := fmt.Sprintf(format, a...)
 	base.write("DEBUG", text)
 }
 func (base *Logger) Error(format string, a ...interface{}) {
-	text := fmt.Sprintf(format, a)
+	text := fmt.Sprintf(format, a...)
 	base.write("ERROR", text)
 }
 func (base *Logger) Panic(format string, a ...interface{}) {
-	text := fmt.Sprintf(format, a)
+	text := fmt.Sprintf(format, a...)
 	base.write("PANIC", text)
 }
 
