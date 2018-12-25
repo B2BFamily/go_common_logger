@@ -1,6 +1,6 @@
 //библиотека для логирования
 //обертка для github.com/natefinch/lumberjack
-package logger
+package go_common_logger
 
 import (
 	"fmt"

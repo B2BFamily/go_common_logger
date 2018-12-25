@@ -1,4 +1,4 @@
-package logger
+package go_common_logger
 
 import (
 	lumberjack "github.com/natefinch/lumberjack"
