@@ -4,7 +4,7 @@ package go_common_logger
 
 import (
 	"fmt"
-	"github.com/B2BFamily/config"
+	config "github.com/B2BFamily/go_common_config"
 	lumberjack "github.com/natefinch/lumberjack"
 	"time"
 )
